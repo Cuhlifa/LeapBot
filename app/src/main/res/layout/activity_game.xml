@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="0dp"
+    android:paddingRight="0dp"
+    android:paddingTop="0dp"
+    android:paddingBottom="0dp"
+    tools:context="leapbot.connor.com.leapbotcpt.RobotActivity"
+    android:padding="0dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:id="@+id/linearLayout">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+
+            <Button
+                android:id="@+id/Controls"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@null"
+                android:contentDescription="Home"
+                android:scaleType="fitEnd"
+                android:text="Controls"
+                android:layout_weight="1"
+                android:enabled="true" />
+
+            <Button
+                android:id="@+id/Games"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@null"
+                android:contentDescription="Menu"
+                android:onClick="menuhome"
+                android:scaleType="fitCenter"
+                android:text="Games"
+                android:layout_weight="1"
+                android:enabled="true"
+                android:textColor="#24bacb" />
+
+            <Button
+                android:id="@+id/Settings"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@null"
+                android:contentDescription="Back"
+                android:scaleType="fitStart"
+                android:text="Settings"
+                android:layout_weight="1"
+                android:enabled="true" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="1">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Complete Games To Unlock Content"
+            android:id="@+id/textView2"
+            android:layout_weight="0.10"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Game 1"
+            android:id="@+id/game1"
+            android:layout_marginTop="51dp"
+            android:layout_below="@+id/textView2"
+            android:layout_alignLeft="@+id/textView2"
+            android:layout_alignStart="@+id/textView2" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Game 4"
+            android:id="@+id/game4"
+            android:layout_alignBottom="@+id/game1"
+            android:layout_alignRight="@+id/textView2"
+            android:layout_alignEnd="@+id/textView2" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Game 5"
+            android:id="@+id/game5"
+            android:layout_below="@+id/game4"
+            android:layout_alignLeft="@+id/game4"
+            android:layout_alignStart="@+id/game4" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Game 2"
+            android:id="@+id/game2"
+            android:layout_alignTop="@+id/game5"
+            android:layout_alignLeft="@+id/game1"
+            android:layout_alignStart="@+id/game1" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Game 3"
+            android:id="@+id/game3"
+            android:layout_below="@+id/game2"
+            android:layout_alignLeft="@+id/game2"
+            android:layout_alignStart="@+id/game2" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Game 6"
+            android:id="@+id/game6"
+            android:layout_below="@+id/game5"
+            android:layout_alignLeft="@+id/game5"
+            android:layout_alignStart="@+id/game5" />
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/progressBar"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="74dp"
+            android:max="100"
+            android:indeterminate="false"
+            android:progress="0" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Progess Comeplete: 0%"
+            android:id="@+id/progresstext"
+            android:layout_marginBottom="47dp"
+            android:layout_above="@+id/progressBar"
+            android:layout_centerHorizontal="true" />
+
+    </RelativeLayout>
+
+</LinearLayout>

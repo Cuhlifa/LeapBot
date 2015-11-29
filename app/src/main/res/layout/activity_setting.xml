@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="wrap_content" android:paddingLeft="0dp"
+    android:paddingRight="0dp"
+    android:paddingTop="0dp"
+    android:paddingBottom="0dp"
+    tools:context="leapbot.connor.com.leapbotcpt.RobotActivity"
+    android:padding="0dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:id="@+id/linearLayout">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+
+            <Button
+                android:id="@+id/Controls"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@null"
+                android:contentDescription="Home"
+                android:scaleType="fitEnd"
+                android:text="Controls"
+                android:layout_weight="1"
+                android:enabled="true" />
+
+            <Button
+                android:id="@+id/Games"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@null"
+                android:contentDescription="Menu"
+                android:onClick="menuhome"
+                android:scaleType="fitCenter"
+                android:text="Games"
+                android:layout_weight="1"
+                android:enabled="true" />
+
+            <Button
+                android:id="@+id/Settings"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@null"
+                android:contentDescription="Back"
+                android:scaleType="fitStart"
+                android:text="Settings"
+                android:layout_weight="1"
+                android:enabled="true"
+                android:textColor="#24bacb" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="358dp"
+        android:weightSum="1"
+        android:gravity="top">
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="358dp"
+            android:id="@+id/devices"
+            android:choiceMode="singleChoice" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="163dp"
+        android:id="@+id/layoutrellayout">
+
+        <Button
+        android:layout_width="116dp"
+        android:layout_height="67dp"
+        android:text="connect"
+        android:id="@+id/connect" />
+
+        <Button
+            android:layout_width="111dp"
+            android:layout_height="67dp"
+            android:text="refresh"
+            android:id="@+id/game1"
+            android:layout_gravity="right"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Status: Disconnected"
+            android:id="@+id/status"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="30dp" />
+    </RelativeLayout>
+
+</LinearLayout>
